@@ -694,6 +694,19 @@
             white-space: nowrap;
         }
 
+        .cafebazaar-icon {
+            display: inline-block;
+            width: 32px;  /* Set to your icon size */
+            height: 32px; /* Set to your icon size */
+            background-image: url('./assets/cafebazar.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            /* Hide the original font if it's still trying to load */
+            text-indent: -9999px; 
+        }
+
         @media (min-width: 1180px) and (min-height: 760px) {
             body {
                 overflow: hidden;
@@ -845,7 +858,7 @@
         <section class="hero-panel glass-panel" aria-labelledby="title">
             <div class="hero-content">
                 <div class="top-tools">
-                    <span class="eyebrow" id="eyebrow">همراه الهام‌بخش برای حفظ قرآن</span>
+                    <span class="eyebrow" id="eyebrow">همراه الهام‌بخش برای حفظ و یادگیری قرآن</span>
                     <button class="lang-switcher" type="button" onclick="toggleLanguage()" id="langBtn" aria-label="Switch language">
                         <i class="fa-solid fa-language" aria-hidden="true"></i>
                         <span>English</span>
@@ -861,12 +874,12 @@
                 </div>
 
                 <p class="description" id="desc">
-                    آیه آموز یک اپلیکیشن مدرن برای تسهیل حفظ قرآن کریم است؛ با تمرین کلمه‌به‌کلمه، تکرار هدفمند، تلاوت صوتی و پیگیری مسیر یادگیری.
+                    آیه آموز یک اپلیکیشن مدرن برای تسهیل حفظ قرآن کریم است؛ با تمرین کلمه‌به‌کلمه، تکرار هدفمند و پیگیری مسیر یادگیری.
                 </p>
 
                 <div class="feature-row" aria-label="ویژگی‌های کلیدی">
                     <span class="feature-chip"><i class="fa-solid fa-book-quran"></i><span id="feature1">حفظ کلمه‌به‌کلمه</span></span>
-                    <span class="feature-chip"><i class="fa-solid fa-headphones"></i><span id="feature2">تلاوت و تکرار صوتی</span></span>
+                    <span class="feature-chip"><i class="fa-solid fa-headphones"></i><span id="feature2">فهم آیه و تفسیر آن</span></span>
                     <span class="feature-chip"><i class="fa-solid fa-chart-line"></i><span id="feature3">پیگیری پیشرفت</span></span>
                 </div>
 
@@ -879,6 +892,14 @@
                         <span class="btn-icon"><i class="fa-solid fa-download" aria-hidden="true"></i></span>
                         <span class="btn-text">
                             <span id="btn-sub">دانلود مستقیم نسخه ۱.۱</span>
+                            <strong id="btn-main">دریافت برای اندروید</strong>
+                        </span>
+                    </a>
+
+                    <a href="https://cafebazaar.ir/app/com.quranquiz.app" target="_blank" class="btn btn-apk" download>
+                        <span class="btn-icon"><i class="cafebazaar-icon" aria-hidden="true"></i></span>
+                        <span class="btn-text">
+                            <span id="btn-sub">دانلود مستقیم از بازار</span>
                             <strong id="btn-main">دریافت برای اندروید</strong>
                         </span>
                     </a>
@@ -1021,14 +1042,14 @@
     <script>
         const translations = {
             fa: {
-                eyebrow: "همراه الهام‌بخش برای حفظ قرآن",
+                eyebrow: "همراه الهام‌بخش برای حفظ و یادگیری قرآن",
                 title: "آیه آموز",
                 subtitle: "یادگیری کلمه‌به‌کلمه، با فضایی آرام و معنوی",
-                desc: "آیه آموز یک اپلیکیشن مدرن برای تسهیل حفظ قرآن کریم است؛ با تمرین کلمه‌به‌کلمه، تکرار هدفمند، تلاوت صوتی و پیگیری مسیر یادگیری.",
+                desc: "آیه آموز یک اپلیکیشن مدرن برای تسهیل حفظ قرآن کریم است؛ با تمرین کلمه‌به‌کلمه، تکرار هدفمند و پیگیری مسیر یادگیری.",
                 feature1: "حفظ کلمه‌به‌کلمه",
-                feature2: "تلاوت و تکرار صوتی",
+                feature2: "فهم آیه و تفسیر آن",
                 feature3: "پیگیری پیشرفت",
-                heroNote: "طراحی این صفحه با تمی الهام‌گرفته از فضای قرآنی، رنگ‌های لطیف بنفش و طلایی، و چیدمانی کم‌اسکرول انجام شده تا تجربه‌ای حرفه‌ای و آرامش‌بخش ایجاد شود.",
+                heroNote: "این عنوان اولین اپلیکیشن مجموعه امت واحد می باشد که با هدف یادگیری ایات قرآن با روش های آسان میباشد .",
                 btnSub: "دانلود مستقیم نسخه ۱.۱",
                 btnMain: "دریافت برای اندروید",
                 btnSub2: "App Store",
@@ -1037,10 +1058,10 @@
                 btnMain3: "به‌زودی",
                 verTitle: "تاریخچه نسخه‌ها",
                 latestBadge: "آخرین نسخه: ۱.۱",
-                galleryTitle: "گالری اپلیکیشن",
-                gallerySubtitle: "در دسکتاپ هر ۹ تصویر هم‌زمان دیده می‌شود و با کلیک، بزرگ‌نمایی خواهد شد.",
-                galleryBadge: "۹ تصویر هم‌زمان",
-                galleryCount: "۹ تصویر در نمای دسکتاپ · ۱ تصویر در هر ردیف موبایل",
+                galleryTitle: "",
+                gallerySubtitle: "",
+                galleryBadge: "صفحات اپلیکیشن",
+                galleryCount: "",
                 galleryHint: "برای مشاهده بزرگ‌تر، روی هر تصویر کلیک کنید",
                 version11: "<ul><li>بهبود تکرار کلمه‌به‌کلمه</li><li>موتور جدید پخش تلاوت</li><li>بهینه‌سازی حالت تاریک</li></ul>",
                 version10: "<ul><li>انتشار اولیه</li><li>مطالعه پایه آیات</li><li>ثبت دستی پیشرفت</li></ul>",
@@ -1056,9 +1077,9 @@
                 subtitle: "Word-by-word learning in a calm, spiritual atmosphere",
                 desc: "A modern Quran memorization app with word-by-word practice, focused repetition, audio recitation, and clear learning progress.",
                 feature1: "Word-by-word learning",
-                feature2: "Audio recitation",
+                feature2: "Translation and Interpretation of each verse",
                 feature3: "Progress tracking",
-                heroNote: "This page is redesigned with a richer Quran-inspired theme, soft purple and gold tones, and a low-scroll layout for a polished and serene experience.",
+                heroNote: "This title is the first application of the Umat Vahed group, which aims to learn Quranic verses using easy methods.",
                 btnSub: "Direct download · v1.1",
                 btnMain: "Get it for Android",
                 btnSub2: "App Store",
@@ -1067,10 +1088,10 @@
                 btnMain3: "Coming soon",
                 verTitle: "Version history",
                 latestBadge: "Latest: 1.1",
-                galleryTitle: "App gallery",
-                gallerySubtitle: "On desktop, all 9 screenshots are visible at once and open larger on click.",
+                galleryTitle: "",
+                gallerySubtitle: "",
                 galleryBadge: "9 visible screenshots",
-                galleryCount: "9 visible on desktop · 1 per row on mobile",
+                galleryCount: "",
                 galleryHint: "Click any screenshot to view it larger",
                 version11: "<ul><li>Improved word-by-word repetition</li><li>New audio recitation engine</li><li>Dark mode optimization</li></ul>",
                 version10: "<ul><li>Initial release</li><li>Basic verse reading</li><li>Manual progress tracking</li></ul>",
